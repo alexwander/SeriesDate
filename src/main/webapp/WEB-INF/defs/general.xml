@@ -8,7 +8,7 @@
 	</definition>
 
 	<definition name="index" extends="common">
-		<put-attribute name="title" value="CV Alexandr Rindyuk" />
+		<put-attribute name="title" value="SerialDate | Your guidline in  world of tv shows" />
 		<put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />
 		<put-attribute name="current" value="index" />
 	</definition>
