@@ -47,5 +47,10 @@ public class UserController {
 		return "user-register";
 	}
 	
+	@RequestMapping("/news")
+	public String showNews() {
+		return "news";
+	}
+	
 
 }
