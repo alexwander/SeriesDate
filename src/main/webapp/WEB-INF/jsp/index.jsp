@@ -169,7 +169,6 @@
     </header><!-- end header -->
 
 
-<h1>Latest news from the Java world:</h1>
 
 
 
@@ -177,7 +176,8 @@
 
 
 
-	
+
+
 
     <section class="section2">
 		<div class="message text-center">
@@ -258,40 +258,7 @@
 	</section><!-- end section -->
 
 
-<table class="table table-bordered table-hover table-striped">
-	<thead>
-		<tr>
-			<th>date</th>
-			<th>item</th>
-		</tr>
-	</thead>
-	<tbody>
-		  <c:forEach items="${items}" var="item">
-		  
-	
-		
-      
-			<tr>
-				<td>
-					<c:out value="${item.publishedDate}" />
-          
-					<br />
-					<c:out value="${item.blog.name}" />
-				</td>
-				<td>
-					<strong>
-						<a href="<c:out value="${item.link}" />" target="_blank">
-							<c:out value="${item.title}" />
-						</a>
-					</strong>
-					<br />
-					${item.description}
-				</td>
-			</tr>
-    
-		</c:forEach>
-	</tbody>
-</table>
+
 
 
 
@@ -322,21 +289,21 @@
              </div>
            </div><!-- he wrap -->
                      <div class="teammembers-meta">
-                     
-                     
-        
-     
+
+
+
+
      <h4><c:out value="${item.blog.name}" /></h4>
-     
+
      <small><a href="<c:out value="${item.link}" />" target="_blank">
              <c:out value="${item.title}" />
            </a> </small>
-           
-           
-     	
-                   
+
+
+
+
                        </div>
-                       
+
                        <div class="teamskills">
                            <div class="progress">
                                <div data-effect="slide-left" class="progress-bar progress-bar-danger" style="width: 85%"><span>WordPress</span></div>
@@ -350,13 +317,13 @@
                        </div>
                    </div><!-- end teammembers -->
        </div><!-- end col 3 -->
-       
-     
-</c:forEach> 
-				
-				
-				
-				
+
+
+</c:forEach>
+
+
+
+
 
               	<div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
                     <div class="teammembers">
@@ -960,7 +927,7 @@
 
 
 
-      
+
 
 
 
