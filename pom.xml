@@ -166,7 +166,7 @@
 			<version>${org.springframework.version}</version>
 		</dependency>
 
-		<!-- Web application development utilities applicable to both Servlet and 
+		<!-- Web to both Servlet and 
 			Portlet Environments (depends on spring-core, spring-beans, spring-context) 
 			Define this if you use Spring MVC, or wish to use Struts, JSF, or another 
 			web framework with Spring (org.springframework.web.*) -->
