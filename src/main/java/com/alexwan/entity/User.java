@@ -21,20 +21,20 @@ public class User {
 	private String email;
 
 	private String password;
-
+	
 	@ManyToMany
 	@JoinTable
 	private List<Role> roles;
-
+	
 	@OneToMany(mappedBy="user")
-	private List<TVSeries> tvSeriess;
+	private List<Blog> blogs;
 
-	public List<TVSeries> getTVSeriess() {
-		return tvSeriess;
+	public List<Blog> getBlogs() {
+		return blogs;
 	}
 
-	public void setTVSeriess(List<TVSeries> tvSeriess) {
-		this.tvSeriess = tvSeriess;
+	public void setBlogs(List<Blog> blogs) {
+		this.blogs = blogs;
 	}
 
 	public List<Role> getRoles() {

@@ -9,37 +9,41 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.alexwan.entity.Series;
-import com.alexwan.service.TVSerialService;
-import com.alexwan.service.SeriesService;
+import com.alexwan.entity.Item;
+import com.alexwan.service.BlogService;
+import com.alexwan.service.ItemService;
 import com.alexwan.service.IBaseEntityService;
 
 @Controller
-@RequestMapping(value="/index") //
+
 public class IndexController {
-
-
+	
+	
 	@Autowired
-	private SeriesService seriesService;
-	private TVSeriesService tvSeriesService;
+	private ItemService itemService;
+	
 
-	@RequestMapping(value="/pages/{series}" , method=RequestMethod.GET)
-	public String index(@PathVariable Long series, @RequestParam("p") Integer p, Model model) {
-		model.addAttribute("seriess", seriesService.getAll(p));
-		 Page<Series> page = seriesService.getAll(p);
-		 int current = page.getNumber() + 1;
-		 int begin = Math.max(1, current - 5);
-		 int end = Math.min(begin + 1, page.getTotalPages());
-		 model.addAttribute("pages", page);
-		 model.addAttribute("beginIndex", begin);
-		 model.addAttribute("endIndex", end);
-		 model.addAttribute("currentIndex", current);
-		 model.addAttribute("seriess", seriesService.getAll(p));
-
-
+//	@RequestMapping(value="/pages/{item}" , method=RequestMethod.GET)
+//	public String index(@PathVariable Long item, @RequestParam("p") Integer p, Model model) {
+//		model.addAttribute("items", itemService.getAll(p));
+//		 Page<Item> page = itemService.getAll(p);
+//		 int current = page.getNumber() + 1;
+//		 int begin = Math.max(1, current - 5);
+//		 int end = Math.min(begin + 1, page.getTotalPages());
+//		 model.addAttribute("pages", page);
+//		 model.addAttribute("beginIndex", begin);
+//		 model.addAttribute("endIndex", end);
+//		 model.addAttribute("currentIndex", current);
+//		 model.addAttribute("items", itemService.getAll(p));
+//		
+//		
+//		return "index";
+//	}
+	
+	
+	@RequestMapping("/index")
+	public String index(Model model) {
+		model.addAttribute("items", itemService.getItems());
 		return "index";
 	}
-
-
-\
 }
